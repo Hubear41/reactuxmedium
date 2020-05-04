@@ -40,21 +40,25 @@ export default function Loading() {
   }, []);
 
   return (
-    <div>
+    <>
       {!done ? (
-        <FadeIn>
-          <div className="d-flex justify-content-center align-items-center">
-            <h1>fetching pizza</h1>
-            {!loading ? (
-              <Lottie options={defaultOptions} height={120} width={120} />
-            ) : (
-              <Lottie options={defaultOptions2} height={120} width={120} />
-            )}
-          </div>
-        </FadeIn>
+        <div>
+          <FadeIn>
+            <div className="d-flex justify-content-center align-items-center">
+              <h1>fetching pizza</h1>
+              {!loading ? (
+                <Lottie options={defaultOptions} height={120} width={120} />
+              ) : (
+                <Lottie options={defaultOptions2} height={120} width={120} />
+              )}
+            </div>
+          </FadeIn>
+        </div>
       ) : (
-        <h1>hello world!</h1>
+        <FadeIn>
+          <h1>hello world!</h1>
+        </FadeIn>
       )}
-    </div>
+    </>
   );
 }

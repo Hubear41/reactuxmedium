@@ -7,5 +7,13 @@ import "bootstrap/dist/css/bootstrap.css";
 export default function Loading() {
   const [done, updateDone] = useState(undefined);
 
-  return <h1>hello world</h1>;
+  return (
+    <div>
+      {!done ? (
+        <ReactLoading type={"bars"} color={"white"} />
+      ) : (
+        <h1>hello world!</h1>
+      )}
+    </div>
+  );
 }
